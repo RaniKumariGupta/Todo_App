@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="main" ng-app="myList" ng-controller="myListController">
+        <h1>TODO-LIST</h1>
+        <div class="addItem">
+            <input type="text" placeholder="Add Your Daily Activity" ng-model="newItem" class="addText">
+            <button ng-click="pushItem()">&#10133;</button>
+        </div>
+        <ul>
+            <li ng-repeat="i in items">{{i}} <span class="del" ng-click="delItem()">&#10060;</span></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
